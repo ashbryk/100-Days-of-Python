@@ -18,6 +18,14 @@ def hurdle():
     turn_right()
     move()
     turn_left()
- 
+
+#Using for loop
 for step in range(6):
     hurdle()
+
+#using while loop
+number_of_hurdles = 6
+while number_of_hurdles > 0:
+    hurdle()
+    number_of_hurdles -= 1
+    print(number_of_hurdles)
