@@ -1,0 +1,92 @@
+# Python program to take user/player through a classic game of hangman!
+
+import random
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+end_of_game = False
+word_list = ["aardvark", "baboon", "camel", "puppy", "elephant"]  # List of words to choose from.
+chosen_word = random.choice(word_list)  # Randomly choose a word from the list.
+word_length = len(chosen_word)
+lives = 6  # Number of lives the player has.
+
+display = []
+for _ in range(word_length):
+    display += "_"
+
+while not end_of_game:
+    guess = input("Guess a letter: ").lower()  # Get a letter guess from the player.
+    if guess not in display:
+        for position in range(word_length):
+            letter = chosen_word[position]
+            if letter == guess:
+                display[position] = letter  # If the guessed letter matches, update the display.
+
+        if guess not in chosen_word:
+            lives -= 1  # If the guessed letter is incorrect, decrement the player's lives.
+            if lives == 0:
+                end_of_game = True  # If no lives left, end the game and print "You lose."
+
+        print(f"{' '.join(display)}")  # Display the current state of the word.
+
+        if "_" not in display:
+            end_of_game = True  # If no underscores remain, the player has guessed the word and won.
+            print("You win.")
+
+        print(stages[lives])  # Display the current hangman stage based on the remaining lives.
