@@ -1,5 +1,6 @@
 #Roobeg's World - practicing defining functions
 
+#Defining specific functions to assist with code readability
 def turn_around():
     turn_left()
     turn_left()
@@ -19,23 +20,23 @@ def hurdle():
     move()
     turn_left()
 
-#Using for loop
+# Using for loop 
 for step in range(6):
     hurdle()
 
-#using while loop
+# Using while loop to loop through iteration of game steps
 number_of_hurdles = 6
 while number_of_hurdles > 0:
     hurdle()
     number_of_hurdles -= 1
     print(number_of_hurdles)
 
-#robot jumping until it hits random goal flag
+# Robot jumping until it hits random goal flag
 while at_goal() != True:
     hurdle()
 print("Finish!")
 
-#robot jumping random hurdles until it hits random goal flag
+# Robot jumping random hurdles until it hits random goal flag
 while not at_goal():
     if wall_in_front():
         hurdle()
@@ -61,7 +62,7 @@ while not at_goal():
     else:
         move()
 
-#Programming robot to exit a maze on it's own
+# Programming robot to exit a maze on it's own
 def turn_right():
     turn_left()
     turn_left()
