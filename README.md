@@ -8,8 +8,7 @@ In this repository, I'll be adding daily log files, code snippets, and mini-proj
 
 ## Progress
 
-- Days completed: 5/100
-- Current focus: Getting started with Python basics
+- Current focus: Getting started with Python basics, loops, functions, dictionaries and more
 
 ## Code Snippets
 
@@ -24,9 +23,6 @@ I plan to complete a series of mini-projects during this course to apply my know
 - I'm following the [Python Official Documentation](https://docs.python.org/3/) for in-depth learning.
 - The [100 Days of Code](https://www.100daysofcode.com/) challenge keeps me motivated.
 
-## Join Me
-
-Feel free to join me on this journey, contribute, and provide feedback. Let's learn and grow together!
 
 ## Contact
 
