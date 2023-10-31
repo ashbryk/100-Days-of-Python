@@ -1,10 +1,12 @@
-## creating a program to collect ticket information for a rollercoaster
-## program analyzes customers demographics and preferences to determine ticket price
+## creating a program to collect ticket information for a rollercoaster ride
+## program analyzes customers input demographics and preferences to determine ticket price
 
+# Print out initial welcome message and user input
 print("Welcome to the rollercoaster!")
 height = int(input("What is your height in cm?"))
 bill = 0
 
+# Programming loop that the program will loop through depending on the user input from above
 if height >= 120:
   print("You can ride the rollercoaster!")
   if age < 12:
