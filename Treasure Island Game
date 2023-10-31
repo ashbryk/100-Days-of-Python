@@ -1,5 +1,6 @@
-# Creating a treasure island game
+# Creating a treasure island game with Python and Pycharm
 
+# Setting up game start-up messaging and asking for user input
 print('''
           ( )___( )
           /__oo   \
@@ -21,6 +22,7 @@ print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 choice1 = input("You\'re at a crossroad, where do you want to go? Type "left" or "right".\n').lower()
 
+# Creating game loop depending on choice of user imput
 if choice1 == "left":
   choice2 == input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for the boat. Type "swim" to swim across.\n').lower()
   if choice2 == "wait";
